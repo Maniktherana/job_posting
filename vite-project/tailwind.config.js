@@ -4,8 +4,8 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      display: ["Exo 2", "sans-serif"],
-      body: ["Exo 2", "sans-serif"],
+      display: ["Merriweather Sans", "sans-serif"],
+      body: ["Merriweather Sans", "sans-serif"],
     },
     extend: {
       screens: {
