@@ -1,14 +1,21 @@
 import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
+import { Navbar, Welcome, Footer, Listings } from './components'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div className="min-h-screen">
+      <div>
+        <Navbar />
+        <Welcome />
+      </div>
+      <Listings />
+      <Footer />
+
+    </div>
   )
 }
 
