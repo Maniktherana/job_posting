@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="min-h-screen">
-      <div>
+      <div className="gradient-bg-welcome">
         <Navbar />
         <Welcome />
       </div>
