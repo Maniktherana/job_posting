@@ -4,8 +4,8 @@ import { Card, Badge, Button } from 'react-bootstrap'
 export default function Job({ job }) {
   return (
     <Card className="m-3">
-        <div className="d-flex justify-content-between p-3.5">
-            <div>
+        <div className="d-flex justify-content-between py-3 px-2">
+            <div className="w-full px-3">
                 <Card.Title>
                     {job.name} - <span className="text-muted font-weight-light">{job.company}</span>
                 </Card.Title>
@@ -20,6 +20,7 @@ export default function Job({ job }) {
                         variant="primary"
                         href={job.url}
                         target="_blank"
+                        className="w-full"
                     >
                         Visit site
                     </Button>
