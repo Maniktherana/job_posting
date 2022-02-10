@@ -3,7 +3,7 @@ import { Card, Badge, Button } from 'react-bootstrap'
 
 export default function Job({ job }) {
   return (
-    <Card>
+    <Card className="m-3">
         <div className="d-flex justify-content-between p-3.5">
             <div>
                 <Card.Title>
@@ -12,8 +12,7 @@ export default function Job({ job }) {
                 <Card.Subtitle>
                     last updated {job.lastUpdated}
                 </Card.Subtitle>
-                {job.role}
-                <Badge>{job.level}</Badge>
+                {job.role}, {job.level} <br /> {job.location}
             </div>
             <div>
             <Card.Text>
