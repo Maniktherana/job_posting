@@ -4,24 +4,26 @@ import { Card, Badge, Button } from 'react-bootstrap'
 export default function Job({ job }) {
   return (
     <Card>
-        <div className="d-flex justify-content-between">
+        <div className="d-flex justify-content-between p-3.5">
             <div>
                 <Card.Title>
                     {job.name} - <span className="text-muted font-weight-light">{job.company}</span>
                 </Card.Title>
                 <Card.Subtitle>
-                    {job.lastUpdated}
+                    last updated {job.lastUpdated}
                 </Card.Subtitle>
                 {job.role}
                 <Badge>{job.level}</Badge>
-                <Card.Text>
-                    <a href={job.url} target="_blank">
+            </div>
+            <div>
+            <Card.Text>
                     <Button
                         variant="primary"
+                        href={job.url}
+                        target="_blank"
                     >
                         Visit site
                     </Button>
-                    </a>
                 </Card.Text>
             </div>
         </div>
