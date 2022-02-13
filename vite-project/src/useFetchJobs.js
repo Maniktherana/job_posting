@@ -1,6 +1,13 @@
 import { useReducer, useEffect } from 'react'
 import axios from 'axios'
 
+/**
+ * <http://localhost:3000/listings?_limit=20&_page=1>; rel="first",
+ * <http://localhost:3000/listings?_limit=20&_page=1>; rel="prev",
+ * <http://localhost:3000/listings?_limit=20&_page=3>; rel="next",
+ * <http://localhost:3000/listings?_limit=20&_page=143>; rel="last"
+ */
+
 const ACTIONS = {
     MAKE_REQUEST: 'makeRequest',
     GET_DATA: 'getData',
@@ -20,14 +27,14 @@ function parseLinkHeader( linkHeader ) {
     return Object.fromEntries( linkHeadersMap );
  }
 
-let currentUrl = "http://localhost:3000/listings?_limit=20&_page=1"
+let currentUrl = `http://localhost:3000/listings?_limit=20`
 
  function paginate( direction ) {
     fetch( currentUrl ).then( response => {
-       let linkHeaders = parseLinkHeader( response.headers.get( "Link" ) );
-       if ( !!linkHeaders[ direction ] ) {
-          currentUrl = linkHeaders[ direction ];
-          fetchCounties( linkHeaders[ direction ] );
+       let linkHeaders = parseLinkHeader(response.headers.get( "Link" ));
+       if (!!linkHeaders[ direction ]) {
+          currentUrl = linkHeaders[direction];
+          fetchCounties(linkHeaders[direction]);
        }
     } );
  }
@@ -54,7 +61,7 @@ export default function useFetchJobs(params, page) {
         const cancelToken1 = axios.CancelToken.source()
         dispatch({ type: ACTIONS.MAKE_REQUEST})
 
-        axios.get(currentUrl, {
+        axios.get(`http://localhost:3000/listings?_limit=20&_page=${page}`, {
             cancelToken: cancelToken1.token,
             params: { page: page, ...params }
         }).then(res => {
@@ -66,7 +73,7 @@ export default function useFetchJobs(params, page) {
 
         const cancelToken2 = axios.CancelToken.source()
 
-        axios.get(currentUrl, {
+        axios.get(`http://localhost:3000/listings?_limit=20&_page=${page}`, {
             cancelToken: cancelToken2.token,
             params: { page: page + 1, ...params }
         }).then(res => {
