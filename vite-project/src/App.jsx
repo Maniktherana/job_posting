@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import { Navbar, Welcome, Footer, Listings, Job, JobsPagination } from './components'
+import { Navbar, Welcome, Footer, Job, JobsPagination } from './components'
 import useFetchJobs from './useFetchJobs'
 import { Container } from 'react-bootstrap'
 
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="min-h-screen">
-      <div className="gradient-bg-welcome">
+      <div className="">
         <Navbar />
         <Welcome />
       </div>
@@ -26,9 +26,7 @@ function App() {
         })}
         <JobsPagination page={page} setPage={setPage} hasNextPage={hasNextPage}/>
       </Container>
-      <Listings />
       <Footer />
-
     </div>
   )
 }
