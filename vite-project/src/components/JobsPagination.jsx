@@ -18,7 +18,7 @@ export default function JobsPagination({ page, setPage, hasNextPage }) {
 
   return (
         <NextUIProvider theme={darkTheme}>
-            <Pagination total={147} siblings={2} initialPage={1} page={page} onChange={(page) => adjustPage(page)} shadow bordered />
+            <Pagination total={143} siblings={2} initialPage={1} page={page} onChange={(page) => adjustPage(page)} shadow bordered />
         </NextUIProvider>
   )
 }

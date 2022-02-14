@@ -36,8 +36,6 @@ function App() {
                 return <Job key={job.id} job={job} />
               })}
             </div>
-            
-            <JobsPagination page={page} setPage={setPage} hasNextPage={hasNextPage} />
           </Container>
         <Footer />
       </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 // import { Card, Badge } from 'react-bootstrap' 
 import { NextUIProvider } from '@nextui-org/react'
-import { useTheme, Button, Input, Spacer, Text, createTheme, styled, Card, Divider, Row } from '@nextui-org/react'
+import { useTheme, Button, Input, Spacer, Text, createTheme, styled, Card, Divider, Row, Link } from '@nextui-org/react'
 
 export default function Job({ job }) {
 
@@ -26,14 +26,11 @@ export default function Job({ job }) {
                                 <Text>
                                     {job.role}, {job.level} <br /> {job.location}
                                 </Text>
-                                <Button
-                                    variant="primary"
-                                    href={job.url}
-                                    target="_blank"
-                                    size="sm"
-                                >
-                                    Visit site
-                                </Button>
+                                <Link href={job.url} target="_blank">
+                                    <Button variant="primary" size="sm">
+                                        Visit site
+                                    </Button>
+                                </Link>
                             </Row>
                         </div>
                     </Card.Body>
