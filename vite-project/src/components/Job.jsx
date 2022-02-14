@@ -17,7 +17,7 @@ export default function Job({ job }) {
             <div className="d-flex justify-content-between py-3 px-2">
                 <Card hoverable borderWeight css={{ width: '40em' }}>
                     <Card.Header>
-                        <h4 b>{job.name} - <span className="text-muted font-weight-light">{job.company}</span></h4>
+                        <h4>{job.name} - <span className="text-muted font-weight-light">{job.company}</span></h4>
                     </Card.Header>
                     <Divider/>
                     <Card.Body css={{ py: '$10', px: '$10' }}>
