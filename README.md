@@ -16,10 +16,10 @@ This is a reconstruction of the website [nowhiteboard.org](nowhiteboard.org) wit
 This is meant to be a fullstack MERN project which shows a list of companies that are hiring without a whiteboard process. Data was provided by Jon Nguyen. At first I used react-bootstrap for the frontend but have now switched to NextUI.
 
 Before
-![React Bootstrap](./bootstrap.png)
+![React Bootstrap](./bootstrap.PNG)
 
 After
-![NextUI](./nextui.png)
+![NextUI](./nextui.PNG)
 
 ## Built with 🛠
 
