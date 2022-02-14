@@ -1,6 +1,6 @@
 # job_posting
 
-This is a reconstruction of the website [nowhiteboard.org](nowhiteboard.org) with the data provided by (Jon Nguyen)[https://twitter.com/NoWhiteboardOrg] (🚧 updates coming soon)
+This is a revamp of the website [nowhiteboard.org](nowhiteboard.org) with the data provided by (Jon Nguyen)[https://twitter.com/NoWhiteboardOrg] (🚧 updates coming soon)
 
 - [Overview](#overview)
   - [Introduction](#introduction)
