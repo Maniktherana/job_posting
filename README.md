@@ -9,8 +9,6 @@ This is a reconstruction of the website [nowhiteboard.org](nowhiteboard.org) wit
 - [Useful Resources](#useful-resources)
 - [Author](#author)
 
-![Landing page screenshot](./landing.png)
-
 ## Overview 
 
 ### Introduction 👋
@@ -49,8 +47,11 @@ After
 * TailwindCSS
 * NextUI
 * Axios
+* Pagination with JSON server
 
 ## Useful Resources 📖
+
+* [Pagination in a JSON server](https://joshgoestoflatiron.medium.com/february-10-pagination-in-a-json-server-api-with-the-link-header-dea63eb0a835)
 
 ## Author
 
