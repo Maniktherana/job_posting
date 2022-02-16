@@ -15,30 +15,6 @@ const ACTIONS = {
     UPDATE_HAS_NEXT_PAGE: "update-has-next-page"
 }
 
-const BASE_URL = "http://localhost:3000/listings"
-
-function parseLinkHeader( linkHeader ) {
-    const linkHeadersArray = linkHeader.split( ", " ).map( header => header.split( "; " ) );
-    const linkHeadersMap = linkHeadersArray.map( header => {
-       const thisHeaderRel = header[1].replace( /"/g, "" ).replace( "rel=", "" );
-       const thisHeaderUrl = header[0].slice( 1, -1 );
-       return [ thisHeaderRel, thisHeaderUrl ]
-    } );
-    return Object.fromEntries( linkHeadersMap );
- }
-
-let currentUrl = `http://localhost:3000/listings?_limit=20`
-
- function paginate( direction ) {
-    fetch( currentUrl ).then( response => {
-       let linkHeaders = parseLinkHeader(response.headers.get( "Link" ));
-       if (!!linkHeaders[ direction ]) {
-          currentUrl = linkHeaders[direction];
-          fetchCounties(linkHeaders[direction]);
-       }
-    } );
- }
-
 function reducer(state, action) {
     switch(action.type) {
         case ACTIONS.MAKE_REQUEST:
@@ -56,12 +32,14 @@ function reducer(state, action) {
 
 export default function useFetchJobs(params, page) {
     const [state, dispatch] = useReducer(reducer, {jobs: [], loading: true})
+    const BASE_URL = `http://localhost:3002/listings?_limit=20&_page=${page}`
+
 
     useEffect(() => {
         const cancelToken1 = axios.CancelToken.source()
         dispatch({ type: ACTIONS.MAKE_REQUEST})
 
-        axios.get(`http://localhost:3000/listings?_limit=20&_page=${page}`, {
+        axios.get(BASE_URL, {
             cancelToken: cancelToken1.token,
             params: { page: page, ...params }
         }).then(res => {
@@ -73,7 +51,7 @@ export default function useFetchJobs(params, page) {
 
         const cancelToken2 = axios.CancelToken.source()
 
-        axios.get(`http://localhost:3000/listings?_limit=20&_page=${page}`, {
+        axios.get(BASE_URL, {
             cancelToken: cancelToken2.token,
             params: { page: page + 1, ...params }
         }).then(res => {
