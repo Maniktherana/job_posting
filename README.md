@@ -54,6 +54,7 @@ This is meant to be a fullstack MERN project which shows a list of companies tha
 ## Useful Resources 📖
 
 * [Pagination in a JSON server](https://joshgoestoflatiron.medium.com/february-10-pagination-in-a-json-server-api-with-the-link-header-dea63eb0a835)
+* Using [this version of vite](https://github.com/vitejs/vite/issues/6537) to get the production build working
 
 ## Author
 
