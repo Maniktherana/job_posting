@@ -1,12 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
-import logo from './logo.svg'
 import './App.css'
 import { Navbar, Welcome, Footer, Job, JobsPagination } from './components'
 import useFetchJobs from './useFetchJobs'
 // import { Container } from 'react-bootstrap'
-import { NextUIProvider } from '@nextui-org/react'
-import { useTheme, Button, Input, Spacer, Text, createTheme, styled, Container } from '@nextui-org/react'
+import { NextUIProvider, createTheme, Container } from '@nextui-org/react'
 
 const darkTheme = createTheme({
   type: "dark",
@@ -23,11 +21,12 @@ function App() {
 
   return (
     <NextUIProvider theme={darkTheme}>
-      <div className="min-h-screen">
-        <div className="">
+      <div 
+        className="min-h-screen"
+        
+      >
           <Navbar />
           <Welcome />
-        </div>
           <Container align='center'>
             <JobsPagination page={page} setPage={setPage} hasNextPage={hasNextPage} />
             <div className="flex flex-col justify-center items-center">

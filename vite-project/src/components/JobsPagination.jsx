@@ -1,7 +1,6 @@
 import React from 'react'
 // import { Pagination } from 'react-bootstrap'
-import { Grid, NextUIProvider } from '@nextui-org/react'
-import { useTheme, Button, Input, Spacer, Text, createTheme, styled, Pagination } from '@nextui-org/react'
+import { NextUIProvider, createTheme, Pagination } from '@nextui-org/react'
 
 export default function JobsPagination({ page, setPage, hasNextPage }) {
 
@@ -18,7 +17,7 @@ export default function JobsPagination({ page, setPage, hasNextPage }) {
 
   return (
         <NextUIProvider theme={darkTheme}>
-            <Pagination total={143} siblings={2} initialPage={1} page={page} onChange={(page) => adjustPage(page)} shadow bordered />
+            <Pagination total={143} siblings={1} initialPage={1} page={page} onChange={(page) => adjustPage(page)} shadow bordered />
         </NextUIProvider>
   )
 }

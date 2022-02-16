@@ -1,10 +1,20 @@
 import React from "react"
-import { NextUIProvider } from '@nextui-org/react'
-import { useTheme, Button, Input, Spacer, Text, createTheme, styled } from '@nextui-org/react'
+import { Divider } from '@chakra-ui/react'
+import {  NextUIProvider, Text, createTheme } from '@nextui-org/react'
+
+const darkTheme = createTheme({
+    type: "dark",
+    theme: {
+      colors: {}
+    }
+  })
 
 const Footer = () => {
     return (
-       <h1>Footer</h1>
+        <NextUIProvider theme={darkTheme}>
+              <Divider />
+              <Text className="text-center my-2" size={12}>Job Posting 2022 - All Rights Reserved</Text>
+        </NextUIProvider>
     )
 }
 

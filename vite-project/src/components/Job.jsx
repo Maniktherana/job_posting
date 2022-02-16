@@ -1,7 +1,6 @@
 import React from 'react'
 // import { Card, Badge } from 'react-bootstrap' 
-import { NextUIProvider } from '@nextui-org/react'
-import { useTheme, Button, Input, Spacer, Text, createTheme, styled, Card, Divider, Row, Link } from '@nextui-org/react'
+import { NextUIProvider, Button, Text, createTheme, Card, Divider, Row, Link } from '@nextui-org/react'
 
 export default function Job({ job }) {
 
@@ -14,8 +13,8 @@ export default function Job({ job }) {
 
   return (
         <NextUIProvider theme={darkTheme}>
-            <div className="d-flex justify-content-between py-3 px-2">
-                <Card hoverable borderWeight css={{ width: '40em' }}>
+            <div className="d-flex w-30 justify-content-between py-3 px-2 z-30 md:w-[75%] lg:w-[75%]">
+                <Card hoverable borderWeight>
                     <Card.Header>
                         <h4>{job.name} - <span className="text-muted font-weight-light">{job.company}</span></h4>
                     </Card.Header>

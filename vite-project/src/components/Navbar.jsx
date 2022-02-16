@@ -1,13 +1,14 @@
 import React from "react"
 import { HiMenuAlt4 } from "react-icons/hi"
 import { AiOutlineClose } from "react-icons/ai"
-import { NextUIProvider } from '@nextui-org/react'
-import { useTheme, Button, Input, Spacer, Text, createTheme, styled } from '@nextui-org/react'
+import { NextUIProvider, createTheme } from '@nextui-org/react'
 
 const darkTheme = createTheme({
     type: "dark",
     theme: {
-      colors: {}
+      colors: {
+          blur: 'rgba(0,0,0,0.5)'
+      }
     }
   })
 
@@ -20,8 +21,8 @@ const Navbar = () => {
 
     return (
         <NextUIProvider theme={darkTheme}>
-            <nav className="w-full">
-                <div className="w-30 mx-5 flex md:justify-center justify-between items-center py-3 px-3">
+            <nav className="w-full sticky top-0 z-50 backdrop-blur-lg ">
+                <div className="w-30 mx-5 flex md:justify-center justify-between items-center px-3">
                     <div className="md:flex-[0.5] flex-initial justify-center items-center">
                         <h3 className="w-32 cursor-pointer">Job Site</h3>
                     </div>
