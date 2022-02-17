@@ -1,6 +1,4 @@
 import React from "react"
-import { HiMenuAlt4 } from "react-icons/hi"
-import { AiOutlineClose } from "react-icons/ai"
 import { NextUIProvider, createTheme, Link } from '@nextui-org/react'
 
 const darkTheme = createTheme({

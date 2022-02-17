@@ -4,6 +4,7 @@ This is a revamp of the website [nowhiteboard.org](nowhiteboard.org) with the da
 
 - [Overview](#overview)
   - [Introduction](#introduction)
+  - [How to use](#how-to-use)
 - [Built with](#built-with)
 - [What I Learned](#what-i-learned)
 - [Useful Resources](#useful-resources)
@@ -22,6 +23,18 @@ This is meant to be a fullstack MERN project which shows a list of companies tha
 ## After (Using NextUI)
 
 ![NextUI](./nextui.PNG)
+
+
+### How to use
+
+Clone the repository to your machine. Make sure you have (JSON server)[https://www.npmjs.com/package/json-server] installed.
+
+```
+cd vite-project
+npm install
+npx json-server --port 3002 --watch api_data.json
+npm run dev
+```
 
 ## Built with 🛠
 
