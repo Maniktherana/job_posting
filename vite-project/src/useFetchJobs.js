@@ -32,7 +32,7 @@ function reducer(state, action) {
 
 export default function useFetchJobs(params, page) {
     const [state, dispatch] = useReducer(reducer, {jobs: [], loading: true})
-    const BASE_URL = `http://localhost:3002/listings?_limit=20&_page=${page}`
+    const BASE_URL = `http://localhost:3002/api/jobs?_limit=20&_page=${page}`
 
 
     useEffect(() => {
