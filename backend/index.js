@@ -113,18 +113,10 @@ let jobs = [
   })
 
   app.get('/api/jobs/:id', (request, response) => {
-    const id = Number(request.params.id)
-    console.log(id)
-    const job = jobs.find(job => job.id === id)
-    if (job) {
-        response.json(job)
-
-      } else {
-        response.status(404).end()
-      }
-    console.log(job)
+    Job.findById(request.params.id).then(job => {
+      response.json(job)
+    })
   })
-
   const requestLogger = (request, response, next) => {
     console.log('Method:', request.method)
     console.log('Path:  ', request.path)
