@@ -14,7 +14,7 @@ This is a revamp of the website [nowhiteboard.org](nowhiteboard.org) with the da
 
 ### Introduction 👋
 
-This is meant to be a fullstack MERN project which shows a list of companies that are hiring without a whiteboard process. Data was provided by (Jon)[https://twitter.com/NoWhiteboardOrg]. At first I used react-bootstrap for the frontend but have now switched to NextUI.
+This is meant to be a fullstack MERN project which shows a list of companies that are hiring without a whiteboard process. Data was provided by (Jon)[https://twitter.com/NoWhiteboardOrg]. At first I used react-bootstrap for the frontend but have now switched to NextUI. :)
 
 ## Before (Using React-bootstrap)
 
