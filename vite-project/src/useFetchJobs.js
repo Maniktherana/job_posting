@@ -33,7 +33,7 @@ function reducer(state, action) {
 export default function useFetchJobs(params, page) {
     const [state, dispatch] = useReducer(reducer, {jobs: [], loading: true})
     const BASE_URL = `http://localhost:3001/api/jobs?_limit=10&_page=${page}`
-    const baseUrl = '/api/jobs'
+    const baseUrl = '/api/jobs/'
 
 
 

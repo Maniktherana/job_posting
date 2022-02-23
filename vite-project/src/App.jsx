@@ -28,7 +28,7 @@ function App() {
           <Navbar />
           <Welcome />
           <Container align='center'>
-            <JobsPagination page={page} setPage={setPage} hasNextPage={hasNextPage} />
+            {/* <JobsPagination page={page} setPage={setPage} hasNextPage={hasNextPage} /> */}
             <div className="flex flex-col justify-center items-center">
               {loading && <h1>Loading...</h1>}
               {error && <h1>Error</h1>}
